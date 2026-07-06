@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jiefu (Jeff) Zhang — Computer Engineering, Purdue University</title>
+<meta name="description" content="Jiefu (Jeff) Zhang — MS student in Computer Engineering at Purdue University. Research in reinforcement learning, robot navigation, LLM evaluation methodology, and hardware–software co-design.">
+
+<!-- ================================================================
+     EDIT ME — replace these placeholders, then commit:
+       1. YOUR_USERNAME        → your GitHub username (1 place)
+       2. YOUR_SCHOLAR_ID      → your Google Scholar profile URL
+       3. YOUR_LINKEDIN        → your LinkedIn profile URL
+       4. PSS_SOCIAL_REPO      → link to the PSS-Social GitHub repo (2 places)
+     Optional:
+       - Upload a square photo named  profile.jpg  to the repo root
+         and it will automatically replace the JZ monogram.
+       - Upload your resume as  cv.pdf  (included in this folder).
+     ================================================================ -->
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&family=STIX+Two+Text:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --paper:#FCFBF7;
+  --ink:#22201A;
+  --muted:#6E6857;
+  --gold:#8A6D1C;        /* Purdue old gold, darkened for contrast */
+  --gold-soft:#D9C98F;
+  --hair:#E8E3D3;
+  --card:#F6F3E9;
+  --serif:'STIX Two Text', Georgia, 'Times New Roman', serif;
+  --sans:'IBM Plex Sans', system-ui, -apple-system, sans-serif;
+  --mono:'IBM Plex Mono', ui-monospace, 'SF Mono', Menlo, monospace;
+}
+
+*{box-sizing:border-box;margin:0;padding:0}
+
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion: reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation:none!important;transition:none!important}
+}
+
+body{
+  background:var(--paper);
+  color:var(--ink);
+  font-family:var(--sans);
+  font-size:1.0625rem;
+  line-height:1.65;
+  -webkit-font-smoothing:antialiased;
+}
+
+::selection{background:var(--gold-soft);color:var(--ink)}
+
+a{color:var(--gold);text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:3px;text-decoration-color:var(--gold-soft)}
+a:hover{text-decoration-color:var(--gold)}
+a:focus-visible{outline:2px solid var(--gold);outline-offset:3px;border-radius:2px}
+
+.wrap{max-width:46rem;margin:0 auto;padding:0 1.25rem}
+
+/* ---------- header ---------- */
+.site-header{padding:1.5rem 0 0}
+.site-header .wrap{display:flex;justify-content:space-between;align-items:baseline;gap:1rem;flex-wrap:wrap}
+.site-name{font-family:var(--serif);font-weight:600;font-size:1.05rem;letter-spacing:.01em}
+.site-name a{color:var(--ink);text-decoration:none}
+nav.top{display:flex;gap:1.1rem;flex-wrap:wrap}
+nav.top a{font-family:var(--mono);font-size:.78rem;color:var(--muted);text-decoration:none}
+nav.top a:hover{color:var(--gold)}
+
+/* ---------- hero ---------- */
+.hero{padding:4rem 0 3rem;animation:rise .6s ease both}
+@keyframes rise{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+.hero .wrap{display:grid;grid-template-columns:1fr auto;gap:2.5rem;align-items:start}
+.hero h1{font-family:var(--serif);font-weight:600;font-size:clamp(2.3rem,6vw,3.3rem);line-height:1.12;letter-spacing:-.01em}
+.hero h1 .zh{font-weight:400;color:var(--muted);font-size:.55em;margin-left:.35em;letter-spacing:.05em}
+.role{margin-top:.9rem;color:var(--muted);font-size:1rem}
+.role b{color:var(--ink);font-weight:500}
+.bio{margin-top:1.4rem;max-width:38rem}
+.bio p + p{margin-top:.8rem}
+.seeking{margin-top:1.4rem;font-family:var(--mono);font-size:.82rem;color:var(--gold);border-left:2px solid var(--gold-soft);padding-left:.8rem}
+.contact{margin-top:1.6rem;display:flex;gap:.6rem 1.4rem;flex-wrap:wrap;font-family:var(--mono);font-size:.82rem}
+
+/* portrait: photo drops in over the monogram when profile.jpg exists */
+.portrait{position:relative;width:9.5rem;height:9.5rem;border:1px solid var(--hair);border-radius:12px;overflow:hidden;background:var(--card);flex-shrink:0}
+.portrait img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.monogram{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:.3rem}
+.monogram .init{font-family:var(--serif);font-weight:600;font-size:2.6rem;color:var(--gold)}
+.monogram .tag{font-family:var(--mono);font-size:.6rem;color:var(--muted);letter-spacing:.12em}
+
+/* ---------- sections ---------- */
+section{padding:2.6rem 0;border-top:1px solid var(--hair)}
+.eyebrow{font-family:var(--mono);font-size:.8rem;color:var(--gold);margin-bottom:1.4rem}
+.eyebrow::before{content:"// "}
+
+/* news */
+.news{list-style:none;display:grid;gap:.7rem}
+.news li{display:grid;grid-template-columns:6.2rem 1fr;gap:1rem;align-items:baseline}
+.news time{font-family:var(--mono);font-size:.78rem;color:var(--muted);white-space:nowrap}
+
+/* publications */
+.pubs{list-style:none;counter-reset:pub;display:grid;gap:1.6rem}
+.pubs li{counter-increment:pub;display:grid;grid-template-columns:2.4rem 1fr;gap:.4rem}
+.pubs li::before{content:"[" counter(pub) "]";font-family:var(--mono);font-size:.82rem;color:var(--gold);padding-top:.15rem}
+.pub-title{font-family:var(--serif);font-weight:600;font-size:1.12rem;line-height:1.35}
+.pub-title a{color:var(--ink);text-decoration-color:var(--gold-soft)}
+.pub-title a:hover{color:var(--gold)}
+.pub-authors{margin-top:.25rem;font-size:.95rem;color:var(--muted)}
+.pub-authors b{color:var(--ink);font-weight:600}
+.pub-meta{margin-top:.3rem;font-family:var(--mono);font-size:.78rem;color:var(--muted);display:flex;gap:1rem;flex-wrap:wrap}
+.pub-meta a{color:var(--gold)}
+
+/* research */
+.research{display:grid;gap:1.8rem}
+.research article h3{font-family:var(--serif);font-weight:600;font-size:1.15rem}
+.research .meta{font-family:var(--mono);font-size:.75rem;color:var(--muted);margin:.25rem 0 .45rem}
+.research p{max-width:40rem}
+.research .links{margin-top:.35rem;font-family:var(--mono);font-size:.78rem;display:flex;gap:1rem;flex-wrap:wrap}
+
+/* teaching */
+.teaching h3{font-family:var(--serif);font-weight:600;font-size:1.1rem}
+.teaching .meta{font-family:var(--mono);font-size:.75rem;color:var(--muted);margin:.25rem 0 .45rem}
+.teaching p{max-width:40rem}
+
+/* hardware cards */
+.hw{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem}
+.hw article{background:var(--card);border:1px solid var(--hair);border-radius:10px;padding:1.1rem 1.15rem;display:flex;flex-direction:column;gap:.5rem}
+.hw h3{font-size:.98rem;font-weight:600;line-height:1.35}
+.hw p{font-size:.9rem;color:var(--muted);line-height:1.55;flex-grow:1}
+.hw .spec{font-family:var(--mono);font-size:.72rem;color:var(--gold);border-top:1px solid var(--hair);padding-top:.55rem}
+
+/* skills */
+.skills{display:grid;gap:.55rem}
+.skills div{display:grid;grid-template-columns:9rem 1fr;gap:1rem;align-items:baseline}
+.skills dt{font-family:var(--mono);font-size:.78rem;color:var(--muted)}
+.skills dd{font-size:.95rem}
+
+/* footer */
+footer{border-top:1px solid var(--hair);margin-top:1rem;padding:2rem 0 3rem}
+footer .wrap{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap;font-family:var(--mono);font-size:.78rem;color:var(--muted)}
+
+/* ---------- responsive ---------- */
+@media (max-width:640px){
+  .hero{padding:2.8rem 0 2.2rem}
+  .hero .wrap{grid-template-columns:1fr}
+  .portrait{order:-1;width:7.5rem;height:7.5rem}
+  .hw{grid-template-columns:1fr}
+  .news li{grid-template-columns:1fr;gap:.1rem}
+  .skills div{grid-template-columns:1fr;gap:.15rem}
+}
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap">
+    <div class="site-name"><a href="#">Jiefu Zhang</a></div>
+    <nav class="top" aria-label="Sections">
+      <a href="#news">news</a>
+      <a href="#publications">publications</a>
+      <a href="#research">research</a>
+      <a href="#hardware">hardware</a>
+      <a href="cv.pdf">cv</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+  <div class="hero">
+    <div class="wrap">
+      <div>
+        <h1>Jiefu Zhang<span class="zh">张洁夫</span></h1>
+        <p class="role"><b>MS student, Computer Engineering</b> · CLAN Lab, Purdue University<br>
+        Advised by Prof. Vaneet Aggarwal</p>
+
+        <div class="bio">
+          <p>I work at the intersection of machine learning and computer systems. My research spans
+          reinforcement learning for robot navigation in dense crowds, statistical methodology for
+          reliable LLM evaluation, and decentralized multi-agent learning.</p>
+          <p>Before that, I built silicon: a multicore RISC-V processor with MOESI cache coherence,
+          a USB&nbsp;1.1 ASIC, and full-custom VLSI layout. That background drives my long-term interest
+          in hardware–software co-design for embodied AI, where perception-to-action timing
+          constraints meet learning systems.</p>
+        </div>
+
+        <!-- Remove this line if you'd rather not announce it -->
+        <p class="seeking">seeking PhD positions · Fall 2027 · learning × systems × architecture</p>
+
+        <div class="contact">
+          <a href="mailto:zhan4018@purdue.edu">email</a>
+          <a href="https://github.com/YOUR_USERNAME">github</a>
+          <a href="https://scholar.google.com/citations?user=YOUR_SCHOLAR_ID">scholar</a>
+          <a href="https://www.linkedin.com/in/YOUR_LINKEDIN">linkedin</a>
+          <a href="cv.pdf">cv.pdf</a>
+        </div>
+      </div>
+
+      <div class="portrait">
+        <div class="monogram" id="monogram">
+          <span class="init">JZ</span>
+          <span class="tag">W. LAFAYETTE, IN</span>
+        </div>
+        <!-- Upload profile.jpg to the repo root and your photo appears here automatically -->
+        <img src="profile.jpg" alt="Portrait of Jiefu Zhang" onerror="this.remove()">
+      </div>
+    </div>
+  </div>
+
+  <section id="news">
+    <div class="wrap">
+      <p class="eyebrow">news</p>
+      <ul class="news">
+        <li><time datetime="2026-06">Jun 2026</time><span>Attended ISCA 2026 in Raleigh, NC — LLM inference systems and GenAI architecture sessions.</span></li>
+        <li><time datetime="2026-05">May 2026</time><span>Preprints online: <a href="https://arxiv.org/abs/2605.05973">SIREN</a> (reliable LLM evaluation) and <a href="https://arxiv.org/abs/2605.08681">Core-Halo</a> (decentralized fixed-point problems).</span></li>
+        <li><time datetime="2026-03">Mar 2026</time><span><a href="https://arxiv.org/abs/2603.06729">“Don’t Freeze, Don’t Crash”</a> — our paper on safe neural navigation in dense crowds is on arXiv.</span></li>
+        <li><time datetime="2025-01">Jan 2025</time><span>Started as graduate TA for ECE 33700, ASIC Design Laboratory.</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="publications">
+    <div class="wrap">
+      <p class="eyebrow">publications &amp; preprints</p>
+      <ol class="pubs">
+        <li>
+          <div>
+            <p class="pub-title"><a href="https://arxiv.org/abs/2605.05973">Towards Reliable LLM Evaluation: Correcting the Winner’s Curse in Adaptive Benchmarking</a></p>
+            <!-- If the paper marks equal contribution, add an asterisk convention here -->
+            <p class="pub-authors">Y. Xu, <b>J. Zhang</b>, H. Sun, Z. Zhou, T. Cao, V. Aggarwal</p>
+            <p class="pub-meta"><span>arXiv:2605.05973</span><span>2026</span><a href="https://arxiv.org/abs/2605.05973">[arXiv]</a></p>
+          </div>
+        </li>
+        <li>
+          <div>
+            <p class="pub-title"><a href="https://arxiv.org/abs/2605.08681">Core-Halo Decomposition: Decentralizing Large-Scale Fixed-Point Problems</a></p>
+            <p class="pub-authors">H. Sun, Y. Xu, <b>J. Zhang</b>, X. Wu, Z. Zhou, J. He, J. Chen</p>
+            <p class="pub-meta"><span>arXiv:2605.08681</span><span>2026</span><a href="https://arxiv.org/abs/2605.08681">[arXiv]</a></p>
+          </div>
+        </li>
+        <li>
+          <div>
+            <p class="pub-title"><a href="https://arxiv.org/abs/2603.06729">Don’t Freeze, Don’t Crash: Extending the Safe Operating Range of Neural Navigation in Dense Crowds</a></p>
+            <p class="pub-authors"><b>J. Zhang</b>, et al.</p>
+            <p class="pub-meta"><span>arXiv:2603.06729</span><span>2026</span><a href="https://arxiv.org/abs/2603.06729">[arXiv]</a><a href="https://github.com/PSS_SOCIAL_REPO">[code]</a></p>
+          </div>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <section id="research">
+    <div class="wrap">
+      <p class="eyebrow">research</p>
+      <div class="research">
+
+        <article>
+          <h3>PSS-Social — safe robot navigation in dense crowds</h3>
+          <p class="meta">deep RL · robot navigation · CLAN Lab</p>
+          <p>A PPO-based navigation framework with density-adaptive proxemic reward shaping and dynamic
+          collision-penalty tuning, targeting the freezing-robot problem. Benchmarked against DS-RNN,
+          SARL, ORCA, and SFM at crowd densities well beyond prior work, improving success rates while
+          reducing both freezing and collision failures.</p>
+          <p class="links"><a href="https://arxiv.org/abs/2603.06729">[arXiv]</a><a href="https://github.com/PSS_SOCIAL_REPO">[code]</a></p>
+        </article>
+
+        <article>
+          <h3>SIREN — selection-aware inference for adaptive LLM evaluation</h3>
+          <p class="meta">post-selection inference · multiplier bootstrap · LLM benchmarking</p>
+          <p>A repeated-split reporting protocol that corrects the winner’s curse in adaptive LLM
+          benchmarking, with simultaneous confidence bands on procedure-performance curves. Led
+          MMLU-Pro tuning experiments across ten open-weight models (vLLM-served, DSPy prompt
+          optimization), showing winner-based reporting can flip deployment conclusions.</p>
+          <p class="links"><a href="https://arxiv.org/abs/2605.05973">[arXiv]</a></p>
+        </article>
+
+        <article>
+          <h3>Core-Halo — decentralizing large-scale fixed-point problems</h3>
+          <p class="meta">multi-agent RL · stochastic approximation · traffic control</p>
+          <p>A decomposition framework separating disjoint update ownership (core) from overlapping
+          read-only context (halo), with exact fixed-point recovery under an explicit locality condition.
+          Built the SUMO multi-intersection traffic benchmark and verified near-centralized convergence
+          on PageRank and smart-grid energy management tasks.</p>
+          <p class="links"><a href="https://arxiv.org/abs/2605.08681">[arXiv]</a></p>
+        </article>
+
+        <article>
+          <h3>Inverse RL for clinical prescribing behavior</h3>
+          <p class="meta">inverse RL · healthcare · in progress</p>
+          <p>Recovering clinician decision logic from large-scale longitudinal pharmacy claims for
+          Type&nbsp;2 Diabetes drug sequencing, comparing MaxEnt IRL, Bayesian IRL, and dynamic discrete
+          choice — toward offline RL for prescribing decision support.</p>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <section id="teaching">
+    <div class="wrap">
+      <p class="eyebrow">teaching</p>
+      <div class="teaching">
+        <h3>ECE 33700 — ASIC Design Laboratory</h3>
+        <p class="meta">graduate teaching assistant · Spring 2025 · Purdue</p>
+        <p>Instructed 60+ students in ASIC design and authored 10+ Verilog-based homework
+        and lab assignments.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="hardware">
+    <div class="wrap">
+      <p class="eyebrow">selected hardware projects</p>
+      <div class="hw">
+        <article>
+          <h3>Multicore RISC-V Processor</h3>
+          <p>5-stage pipelined RV core with hazard resolution via forwarding and stalling; multicore efficiency improved 30% with MOESI cache coherence.</p>
+          <p class="spec">RISC-V · 5-stage · MOESI</p>
+        </article>
+        <article>
+          <h3>USB 1.1 ASIC</h3>
+          <p>Full-speed data-transfer ASIC in Verilog with an AHB-Lite interface, validated in QuestaSim.</p>
+          <p class="spec">12 Mbps · 98% test coverage</p>
+        </article>
+        <article>
+          <h3>8-bit Wallace Tree Multiplier</h3>
+          <p>Full-custom schematic and layout in Cadence Virtuoso with parasitic extraction; DRC/LVS-clean.</p>
+          <p class="spec">≤ 2.5 ns · ≤ 850 fJ</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="skills">
+    <div class="wrap">
+      <p class="eyebrow">skills</p>
+      <dl class="skills">
+        <div><dt>programming</dt><dd>Python, C/C++, Verilog, SystemVerilog, MATLAB, Java</dd></div>
+        <div><dt>ml / research</dt><dd>PyTorch, deep RL, Gym, PettingZoo, DSPy, vLLM</dd></div>
+        <div><dt>hardware / eda</dt><dd>Cadence Virtuoso, QuestaSim, DRC/LVS, RTL design, FPGA, ASIC/SoC integration</dd></div>
+        <div><dt>languages</dt><dd>English (fluent), Mandarin (native)</dd></div>
+      </dl>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© 2026 Jiefu Zhang</span>
+    <span><a href="mailto:zhan4018@purdue.edu">zhan4018@purdue.edu</a></span>
+  </div>
+</footer>
+
+</body>
+</html>
