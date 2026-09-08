@@ -1,27 +1,14 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Jiefu (Jeff) Zhang — Computer Engineering, Purdue University</title>
-<meta name="description" content="Jiefu (Jeff) Zhang — MS student in Computer Engineering at Purdue University. Research in reinforcement learning, robot navigation, LLM evaluation methodology, and hardware–software co-design.">
-
-<!-- ================================================================
-     EDIT ME — replace these placeholders, then commit:
-       1. YOUR_USERNAME        → your GitHub username (1 place)
-       2. YOUR_SCHOLAR_ID      → your Google Scholar profile URL
-       3. YOUR_LINKEDIN        → your LinkedIn profile URL
-       4. PSS_SOCIAL_REPO      → link to the PSS-Social GitHub repo (2 places)
-     Optional:
-       - Upload a square photo named  profile.jpg  to the repo root
-         and it will automatically replace the JZ monogram.
-       - Upload your resume as  cv.pdf  (included in this folder).
-     ================================================================ -->
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&family=STIX+Two+Text:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
-
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Jiefu (Jeff) Zhang — Computer Engineering &amp; Reliable AI | Purdue</title>
+<meta content="Jiefu (Jeff) Zhang, Computer Engineering MS student at Purdue University. Reliable AI, reinforcement learning, AI evaluation, and hardware systems. Seeking full-time opportunities and Fall 2027 PhD positions." name="description"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&amp;family=IBM+Plex+Sans:wght@400;500;600&amp;family=STIX+Two+Text:ital,wght@0,400;0,500;0,600;1,400&amp;display=swap" rel="stylesheet"/>
 <style>
 :root{
   --paper:#FCFBF7;
@@ -150,207 +137,233 @@ footer .wrap{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap;
   .news li{grid-template-columns:1fr;gap:.1rem}
   .skills div{grid-template-columns:1fr;gap:.15rem}
 }
+
+/* September 2026 update: opportunity statement, resume downloads, accessibility. */
+.wrap{max-width:58rem}
+.site-header .wrap{align-items:center}
+nav.top{gap:.7rem 1rem}
+.hero{padding:3rem 0 2.5rem}
+.hero .wrap{grid-template-columns:minmax(0,1fr) auto;gap:2rem}
+.hero h1{font-size:clamp(2.15rem,5.8vw,3.05rem)}
+.hero h1 .preferred{font-size:.72em;font-weight:400;color:var(--muted)}
+.hero h1 .zh{display:block;margin:.45rem 0 0;font-size:.37em}
+.bio{max-width:43rem}
+.bio p+p{margin-top:.85rem}
+.contact{gap:.6rem 1.25rem}
+.contact a{overflow-wrap:anywhere}
+.portrait{margin-top:.3rem}
+.seeking{font-family:var(--sans);font-size:.95rem;line-height:1.6;background:var(--card);border:1px solid var(--hair);border-left:3px solid var(--gold);border-radius:0 8px 8px 0;padding:1rem 1.15rem;color:var(--ink);margin-top:1.5rem}
+.seeking h2{font-family:var(--sans);font-size:1rem;line-height:1.4;color:var(--gold);margin:0 0 .55rem}
+.seeking p+p{margin-top:.45rem}
+.seeking .invite{font-size:.88rem;margin-top:.7rem;color:var(--muted)}
+.downloads{display:flex;gap:.6rem;flex-wrap:wrap;margin-top:1.2rem}
+.downloads a{font-size:.84rem;font-weight:500;border:1px solid var(--gold-soft);border-radius:5px;padding:.42rem .75rem;text-decoration:none}
+.downloads a:first-child{background:var(--gold);border-color:var(--gold);color:var(--paper)}
+.downloads a:hover{box-shadow:0 0 0 1px var(--gold)}
+section{scroll-margin-top:1rem}
+.eyebrow{font-weight:500}
+.research article{padding-bottom:1.2rem;border-bottom:1px solid var(--hair)}
+.research article:last-child{padding-bottom:0;border-bottom:0}
+.research p{max-width:49rem}
+.badge{display:inline-block;font-family:var(--mono);font-weight:400;font-size:.68rem;line-height:1.5;padding:.12rem .5rem;margin-left:.4rem;background:var(--card);border:1px solid var(--gold-soft);border-radius:4px;color:var(--gold);vertical-align:middle;white-space:nowrap}
+.section-note{color:var(--muted);font-size:.9rem;margin:-.75rem 0 1.35rem}
+.education-entry + .education-entry,.teaching article + article{margin-top:1.2rem}
+.education-entry h3{font-family:var(--serif);font-size:1.14rem}
+.education-entry .meta{font-family:var(--mono);font-size:.78rem;color:var(--muted);margin:.2rem 0 .4rem}
+.education-entry p{font-size:.95rem}
+.skip-link{position:absolute;left:-9999px;top:.5rem;padding:.5rem .75rem;background:var(--paper);z-index:10}
+.skip-link:focus{left:1rem}
+@media(max-width:700px){
+ .hero .wrap{grid-template-columns:minmax(0,1fr)}
+ .portrait{order:-1;width:6rem;height:6rem;margin-top:0}
+ .hero{padding-top:2rem}
+ .hero h1 .zh{display:inline;margin-left:.5rem;font-size:.43em}
+ .hw{grid-template-columns:1fr}
+ .skills div{grid-template-columns:1fr;gap:.15rem}
+ nav.top{gap:.5rem .85rem}
+ .badge{margin-left:0;margin-top:.3rem}
+}
+@media(max-width:380px){
+ .wrap{padding:0 1rem}
+ .hero h1 .zh{display:block;margin-left:0}
+ .downloads a{width:100%;text-align:center}
+}
+@media print{
+ .site-header,.portrait,.downloads,.skip-link{display:none}
+ .wrap{max-width:none}
+ .hero{padding:0 0 1rem}
+ .hero .wrap{display:block}
+ section{padding:1rem 0}
+ a{color:inherit}
+ .research article,.pubs li,.hw article{break-inside:avoid}
+}
+
+@media(max-width:700px){.monogram .init{line-height:1.15;font-size:2.1rem}.monogram .tag{text-align:center;line-height:1.2;font-size:.5rem;letter-spacing:.03em;padding:0 .4rem}}
 </style>
-</head>
-<body>
-
+<link href="https://jefferyz001.github.io/" rel="canonical"/><meta content="Jiefu (Jeff) Zhang — Computer Engineering &amp; Reliable AI" property="og:title"/><meta content="Purdue Computer Engineering MS student seeking full-time opportunities and Fall 2027 PhD positions. Research, projects, and resume." property="og:description"/><meta content="website" property="og:type"/><meta content="https://jefferyz001.github.io/" property="og:url"/><meta content="#FCFBF7" name="theme-color"/></head>
+<body><a class="skip-link" href="#main-content">Skip to content</a>
 <header class="site-header">
-  <div class="wrap">
-    <div class="site-name"><a href="#">Jiefu Zhang</a></div>
-    <nav class="top" aria-label="Sections">
-      <a href="#news">news</a>
-      <a href="#publications">publications</a>
-      <a href="#research">research</a>
-      <a href="#hardware">hardware</a>
-      <a href="cv.pdf">cv</a>
-    </nav>
-  </div>
+<div class="wrap">
+<div class="site-name"><a href="#">Jiefu Zhang</a></div>
+<nav aria-label="Sections" class="top"><a href="#opportunities">opportunities</a>
+<a href="#publications">publications</a><a href="#research">research</a>
+<a href="#hardware">hardware</a><a href="resume.pdf">resume</a><a href="cv.pdf">full CV</a></nav>
+</div>
 </header>
+<main id="main-content">
+<div class="hero">
+<div class="wrap">
+<div>
+<h1>Jiefu <span class="preferred">(Jeff)</span> Zhang<span class="zh" lang="zh">张杰夫</span></h1>
+<p class="role"><b>MS student, Computer Engineering</b> · Purdue University<br/>
+Graduate Research Assistant, CLAN Lab · Advisor: Prof. Vaneet Aggarwal<br/>
+Expected graduation: December 2026</p><aside aria-labelledby="opportunity-title" class="seeking" id="opportunities">
+<h2 id="opportunity-title">Actively seeking full-time opportunities and PhD positions</h2>
+<p><strong>Full-time roles:</strong> I am exploring opportunities in applied AI/ML, research engineering, and hardware/systems validation following my expected December 2026 graduation.</p>
+<p><strong>PhD positions:</strong> I am seeking Fall 2027 opportunities in reliable AI, reinforcement learning, and hardware–software co-design.</p>
+<p class="invite">I welcome conversations with hiring teams and prospective PhD advisors about how my research and engineering background could contribute to their work. <a href="mailto:zhan4018@purdue.edu?subject=Opportunity%20for%20Jiefu%20Zhang">Get in touch →</a></p>
+</aside>
+<div class="bio"><p>I work at the intersection of <strong>reliable AI and computer systems</strong>. My research spans reinforcement learning for dense-crowd robot navigation, reliable evaluation of LLMs and interactive agents, and decentralized learning.</p>
+<p>My ongoing work studies how deployed learning systems can adapt without overwriting previously validated behavior, and how representation geometry can guide replay in continual learning. I also have hands-on experience in RTL/ASIC design and verification, including a multicore RISC-V processor, a USB 1.1 data-transfer engine, and full-custom VLSI layout.</p></div>
 
-<main>
-
-  <div class="hero">
-    <div class="wrap">
-      <div>
-        <h1>Jiefu Zhang<span class="zh">张杰夫</span></h1>
-        <p class="role"><b>MS student, Computer Engineering</b> · CLAN Lab, Purdue University<br>
-        Advised by Prof. Vaneet Aggarwal</p>
-
-        <div class="bio">
-          <p>I work at the intersection of machine learning and computer systems. My research spans
-          reinforcement learning for robot navigation in dense crowds, statistical methodology for
-          reliable LLM evaluation, and decentralized multi-agent learning.</p>
-          <p>Before that, I built silicon: a multicore RISC-V processor with MSI cache coherence,
-          a USB&nbsp;1.1 ASIC, and full-custom VLSI layout. That background drives my long-term interest
-          in hardware–software co-design for embodied AI, where perception-to-action timing
-          constraints meet learning systems.</p>
-        </div>
-
-        <!-- Remove this line if you'd rather not announce it -->
-        <p class="seeking">seeking PhD positions · Fall 2027 · learning × systems × architecture</p>
-
-        <div class="contact">
-          <a href="mailto:zhan4018@purdue.edu">email</a>
-          <a href="https://github.com/YOUR_USERNAME">github</a>
-          <a href="cv.pdf">cv.pdf</a>
-        </div>
-      </div>
-
-      <div class="portrait">
-        <div class="monogram" id="monogram">
-          <span class="init">JZ</span>
-          <span class="tag">W. LAFAYETTE, IN</span>
-        </div>
-        <!-- Upload profile.jpg to the repo root and your photo appears here automatically -->
-        <img src="profile.jpg" alt="Portrait of Jiefu Zhang" onerror="this.remove()">
-      </div>
-    </div>
-  </div>
-
-  <section id="news">
-    <div class="wrap">
-      <p class="eyebrow">news</p>
-      <ul class="news">
-        <li><time datetime="2026-06">Jun 2026</time><span>Attended ISCA 2026 in Raleigh, NC — LLM inference systems and GenAI architecture sessions.</span></li>
-        <li><time datetime="2026-05">May 2026</time><span>Preprints online: <a href="https://arxiv.org/abs/2605.05973">SIREN</a> (reliable LLM evaluation) and <a href="https://arxiv.org/abs/2605.08681">Core-Halo</a> (decentralized fixed-point problems).</span></li>
-        <li><time datetime="2026-03">Mar 2026</time><span><a href="https://arxiv.org/abs/2603.06729">“Don’t Freeze, Don’t Crash”</a> — our paper on safe neural navigation in dense crowds is on arXiv.</span></li>
-        <li><time datetime="2025-01">Jan 2025</time><span>Started as graduate TA for ECE 33700, ASIC Design Laboratory.</span></li>
-      </ul>
-    </div>
-  </section>
-
-  <section id="publications">
-    <div class="wrap">
-      <p class="eyebrow">publications &amp; preprints</p>
-      <ol class="pubs">
-        <li>
-          <div>
-            <p class="pub-title"><a href="https://arxiv.org/abs/2605.05973">Towards Reliable LLM Evaluation: Correcting the Winner’s Curse in Adaptive Benchmarking</a></p>
-            <!-- If the paper marks equal contribution, add an asterisk convention here -->
-            <p class="pub-authors">Y. Xu, <b>J. Zhang</b>, H. Sun, Z. Zhou, T. Cao, V. Aggarwal</p>
-            <p class="pub-meta"><span>arXiv:2605.05973</span><span>2026</span><a href="https://arxiv.org/abs/2605.05973">[arXiv]</a></p>
-          </div>
-        </li>
-        <li>
-          <div>
-            <p class="pub-title"><a href="https://arxiv.org/abs/2605.08681">Core-Halo Decomposition: Decentralizing Large-Scale Fixed-Point Problems</a></p>
-            <p class="pub-authors">H. Sun, Y. Xu, <b>J. Zhang</b>, X. Wu, Z. Zhou, J. He, J. Chen</p>
-            <p class="pub-meta"><span>arXiv:2605.08681</span><span>2026</span><a href="https://arxiv.org/abs/2605.08681">[arXiv]</a></p>
-          </div>
-        </li>
-        <li>
-          <div>
-            <p class="pub-title"><a href="https://arxiv.org/abs/2603.06729">Don’t Freeze, Don’t Crash: Extending the Safe Operating Range of Neural Navigation in Dense Crowds</a></p>
-            <p class="pub-authors"><b>J. Zhang</b>, et al.</p>
-            <p class="pub-meta"><span>arXiv:2603.06729</span><span>2026</span><a href="https://arxiv.org/abs/2603.06729">[arXiv]</a><a href="https://github.com/PSS_SOCIAL_REPO">[code]</a></p>
-          </div>
-        </li>
-      </ol>
-    </div>
-  </section>
-
-  <section id="research">
-    <div class="wrap">
-      <p class="eyebrow">research</p>
-      <div class="research">
-
-        <article>
-          <h3>PSS-Social — safe robot navigation in dense crowds</h3>
-          <p class="meta">deep RL · robot navigation · CLAN Lab</p>
-          <p>A PPO-based navigation framework with density-adaptive proxemic reward shaping and dynamic
-          collision-penalty tuning, targeting the freezing-robot problem. Benchmarked against DS-RNN,
-          SARL, ORCA, and SFM at crowd densities well beyond prior work, improving success rates while
-          reducing both freezing and collision failures.</p>
-          <p class="links"><a href="https://arxiv.org/abs/2603.06729">[arXiv]</a><a href="https://github.com/PSS_SOCIAL_REPO">[code]</a></p>
-        </article>
-
-        <article>
-          <h3>SIREN — selection-aware inference for adaptive LLM evaluation</h3>
-          <p class="meta">post-selection inference · multiplier bootstrap · LLM benchmarking</p>
-          <p>A repeated-split reporting protocol that corrects the winner’s curse in adaptive LLM
-          benchmarking, with simultaneous confidence bands on procedure-performance curves. Led
-          MMLU-Pro tuning experiments across ten open-weight models (vLLM-served, DSPy prompt
-          optimization), showing winner-based reporting can flip deployment conclusions.</p>
-          <p class="links"><a href="https://arxiv.org/abs/2605.05973">[arXiv]</a></p>
-        </article>
-
-        <article>
-          <h3>Core-Halo — decentralizing large-scale fixed-point problems</h3>
-          <p class="meta">multi-agent RL · stochastic approximation · traffic control</p>
-          <p>A decomposition framework separating disjoint update ownership (core) from overlapping
-          read-only context (halo), with exact fixed-point recovery under an explicit locality condition.
-          Built the SUMO multi-intersection traffic benchmark and verified near-centralized convergence
-          on PageRank and smart-grid energy management tasks.</p>
-          <p class="links"><a href="https://arxiv.org/abs/2605.08681">[arXiv]</a></p>
-        </article>
-
-        <article>
-          <h3>Inverse RL for clinical prescribing behavior</h3>
-          <p class="meta">inverse RL · healthcare · in progress</p>
-          <p>Recovering clinician decision logic from large-scale longitudinal pharmacy claims for
-          Type&nbsp;2 Diabetes drug sequencing, comparing MaxEnt IRL, Bayesian IRL, and dynamic discrete
-          choice — toward offline RL for prescribing decision support.</p>
-        </article>
-
-      </div>
-    </div>
-  </section>
-
-  <section id="teaching">
-    <div class="wrap">
-      <p class="eyebrow">teaching</p>
-      <div class="teaching">
-        <h3>ECE 33700 — ASIC Design Laboratory</h3>
-        <p class="meta">graduate teaching assistant · Spring 2025 · Purdue</p>
-        <p>Instructed 60+ students in ASIC design and authored 10+ Verilog-based homework
-        and lab assignments.</p>
-      </div>
-    </div>
-  </section>
-
-  <section id="hardware">
-    <div class="wrap">
-      <p class="eyebrow">selected hardware projects</p>
-      <div class="hw">
-        <article>
-          <h3>Multicore RISC-V Processor</h3>
-          <p>5-stage pipelined RV core with hazard resolution via forwarding and stalling; multicore efficiency improved 30% with MSI cache coherence.</p>
-          <p class="spec">RISC-V · 5-stage · MSI</p>
-        </article>
-        <article>
-          <h3>USB 1.1 ASIC</h3>
-          <p>Full-speed data-transfer ASIC in Verilog with an AHB-Lite interface, validated in QuestaSim.</p>
-          <p class="spec">12 Mbps · 98% test coverage</p>
-        </article>
-        <article>
-          <h3>8-bit Wallace Tree Multiplier</h3>
-          <p>Full-custom schematic and layout in Cadence Virtuoso with parasitic extraction; DRC/LVS-clean.</p>
-          <p class="spec">≤ 2.5 ns · ≤ 850 fJ</p>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <section id="skills">
-    <div class="wrap">
-      <p class="eyebrow">skills</p>
-      <dl class="skills">
-        <div><dt>programming</dt><dd>Python, C/C++, Verilog, SystemVerilog, MATLAB, Java</dd></div>
-        <div><dt>ml / research</dt><dd>PyTorch, deep RL, Gym, PettingZoo, DSPy, vLLM</dd></div>
-        <div><dt>hardware / eda</dt><dd>Cadence Virtuoso, QuestaSim, DRC/LVS, RTL design, FPGA, ASIC/SoC integration</dd></div>
-        <div><dt>languages</dt><dd>English (native), Mandarin (native)</dd></div>
-      </dl>
-    </div>
-  </section>
-
+<div class="contact"><a href="mailto:zhan4018@purdue.edu">zhan4018@purdue.edu</a>
+<a href="https://github.com/jefferyz001">GitHub</a></div><div aria-label="Resume downloads" class="downloads">
+<a href="resume.pdf">One-page resume · PDF</a>
+<a href="cv.pdf">Full research CV · PDF</a>
+</div>
+</div>
+<div class="portrait">
+<div class="monogram" id="monogram">
+<span class="init">JZ</span>
+<span class="tag">W. LAFAYETTE, IN</span>
+</div>
+<!-- Upload profile.jpg to the repo root and your photo appears here automatically -->
+<!-- Optional: add your own profile.jpg and an img element here. No photo is loaded by default. --></div>
+</div>
+</div>
+<section id="news">
+<div class="wrap">
+<h2 class="eyebrow">news</h2>
+<ul class="news"><li><time datetime="2026-09">Sep 2026</time><span>Actively exploring <a href="#opportunities">full-time roles and Fall 2027 PhD positions</a>. My <a href="resume.pdf">one-page resume</a> and <a href="cv.pdf">full research CV</a> are available.</span></li>
+<li><time datetime="2026-08">Aug 2026</time><span><a href="https://arxiv.org/abs/2608.30916">SASST: Selection-Aware Stress Testing for Interactive Agents</a> is now on arXiv.</span></li>
+<li><time datetime="2026-06">Jun 2026</time><span>Attended ISCA 2026 in Raleigh, NC — LLM inference systems and GenAI architecture sessions.</span></li>
+<li><time datetime="2026-05">May 2026</time><span>Preprints online: <a href="https://arxiv.org/abs/2605.05973">SIREN</a> (reliable LLM evaluation) and <a href="https://arxiv.org/abs/2605.08681">Core-Halo</a> (decentralized fixed-point problems).</span></li>
+<li><time datetime="2026-03">Mar 2026</time><span><a href="https://arxiv.org/abs/2603.06729">“Don’t Freeze, Don’t Crash”</a> — our paper on safe neural navigation in dense crowds is on arXiv.</span></li>
+<li><time datetime="2025-01">Jan 2025</time><span>Started as graduate TA for ECE 33700, ASIC Design Laboratory.</span></li>
+</ul>
+</div>
+</section>
+<section id="publications">
+<div class="wrap">
+<h2 class="eyebrow">publications &amp; preprints</h2>
+<ol class="pubs"><li><div><p class="pub-title"><a href="https://arxiv.org/abs/2608.30916">Selection-Aware Stress Testing for Interactive Agents</a></p>
+<p class="pub-authors">Y. Xu, C. Li, <b>J. Zhang</b>, H. Sun, Z. Li, V. Aggarwal</p><p class="pub-meta"><span>arXiv:2608.30916</span><span>Preprint · 2026</span><a href="https://arxiv.org/abs/2608.30916">[arXiv]</a></p></div></li>
+<li><div><p class="pub-title"><a href="https://arxiv.org/abs/2605.08681">Core-Halo Decomposition: Decentralizing Large-Scale Fixed-Point Problems</a></p>
+<p class="pub-authors">H. Sun, Y. Xu, <b>J. Zhang</b>, X. Wu, Z. Zhou, J. He, J. Chen</p><p class="pub-meta"><span>arXiv:2605.08681</span><span>Preprint · 2026</span><a href="https://arxiv.org/abs/2605.08681">[arXiv]</a></p></div></li>
+<li><div><p class="pub-title"><a href="https://arxiv.org/abs/2605.05973">Towards Reliable LLM Evaluation: Correcting the Winner’s Curse in Adaptive Benchmarking</a></p>
+<p class="pub-authors">Y. Xu, <b>J. Zhang</b>, H. Sun, Z. Zhou, T. Cao, V. Aggarwal</p><p class="pub-meta"><span>arXiv:2605.05973</span><span>Preprint · 2026</span><a href="https://arxiv.org/abs/2605.05973">[arXiv]</a></p></div></li>
+<li><div><p class="pub-title"><a href="https://arxiv.org/abs/2603.06729">Don’t Freeze, Don’t Crash: Extending the Safe Operating Range of Neural Navigation in Dense Crowds</a></p>
+<p class="pub-authors"><b>J. Zhang</b>, Y. Xu, V. Aggarwal</p><p class="pub-meta"><span>arXiv:2603.06729</span><span>Preprint · 2026</span><a href="https://arxiv.org/abs/2603.06729">[arXiv]</a><a href="https://github.com/jefferyz001/PSS-Social">[code]</a></p></div></li></ol>
+</div>
+</section>
+<section id="research">
+<div class="wrap">
+<h2 class="eyebrow">research</h2>
+<div class="research">
+<article id="ftcr">
+<h3>FTCR — fail-closed test-time repair <span class="badge">Ongoing</span></h3>
+<p class="meta">deployed RL · specialist reuse · statistical admission · chip macro placement</p>
+<p>Developing a reuse-first repair framework for deployed reinforcement-learning policies. A frozen base model remains unchanged; family-scoped specialists are trained in isolation, tested against the base on paired evaluation episodes, and cached only after admission. Validated specialists can be reused on recurring workloads or tested for transfer to a new family. Current applications include dense-crowd navigation and chip macro placement.</p>
+</article>
+<article id="sc-frc">
+<h3>SC-FRC — spatially coherent forgetting risk control <span class="badge">Ongoing</span></h3>
+<p class="meta">online continual learning · representation geometry · experience replay</p>
+<p>Developing task-free replay that uses agreement among nearby representations to distinguish spatially supported forgetting risk from isolated noisy scores. Kernel consensus and entropy-regularized transport turn regional risk estimates into replay-loss weights, while retaining uniform rehearsal. Current work includes continual instruction tuning, controlled baseline comparisons, and analysis of estimation noise and computational cost.</p>
+</article>
+<article id="sasst">
+<h3>SASST — selection-aware stress testing for interactive agents</h3>
+<p class="meta">interactive agents · discovery / confirmation · semantic task reweighting</p>
+<p>A protocol for checking whether a selected agent workflow’s apparent advantage survives independent confirmation and changes in task composition. Semantic stress rules are learned from pre-execution features on discovery tasks, then frozen and evaluated on separate confirmation tasks. Support, stability, and joint-inference checks allow an explicit no-claim outcome when the evidence is insufficient.</p>
+<p class="links"><a href="https://arxiv.org/abs/2608.30916">[arXiv]</a></p>
+</article>
+<article id="pss-social">
+<h3>PSS-Social — safe robot navigation in dense crowds</h3>
+<p class="meta">deep RL · density generalization · robot navigation</p>
+<p>Developed and benchmarked a reinforcement-learning approach to dense-crowd navigation, combining density-invariant observations, density-randomized training, and physics-informed proxemic reward shaping. The study evaluates zero-shot transfer to larger crowds and separates goal-reaching, collision-free success, and freezing failures across learned and analytical baselines.</p>
+<p class="links"><a href="https://arxiv.org/abs/2603.06729">[arXiv]</a><a href="https://github.com/jefferyz001/PSS-Social">[code]</a></p>
+</article>
+<article id="siren">
+<h3>SIREN — selection-aware inference for adaptive LLM evaluation</h3>
+<p class="meta">post-selection inference · held-out evaluation · LLM benchmarking</p>
+<p>Co-developed a repeated-split reporting protocol for the fresh-data performance of tune-then-deploy LLM procedures under explicit tuning budgets. It freezes a post-search shortlist, separates selection from held-out evaluation, and quantifies uncertainty with an item-level multiplier bootstrap. Led MMLU-Pro tuning experiments with vLLM-served models and DSPy prompt optimization.</p>
+<p class="links"><a href="https://arxiv.org/abs/2605.05973">[arXiv]</a></p>
+</article>
+<article id="core-halo">
+<h3>Core-Halo — decentralizing large-scale fixed-point problems</h3>
+<p class="meta">multi-agent learning · local read access · decentralized evaluation</p>
+<p>Co-developed a framework that separates disjoint update ownership (core) from overlapping read-only context (halo), preserving the dependencies needed to recover the original fixed point under a locality condition. Built SUMO/PettingZoo traffic-control benchmarks and contributed PageRank and smart-grid experiments comparing decentralized and centralized solutions.</p>
+<p class="links"><a href="https://arxiv.org/abs/2605.08681">[arXiv]</a></p>
+</article>
+</div>
+</div>
+</section>
+<section id="education"><div class="wrap">
+<h2 class="eyebrow">education</h2><div class="education-entry">
+<h3>Purdue University — Computer Engineering</h3>
+<p class="meta">West Lafayette, Indiana · Accelerated BS/MS program</p>
+<p><strong>MS, Thesis Track:</strong> expected December 2026 · Graduate GPA: 3.88/4.0<br/>
+<strong>BS:</strong> completed December 2024</p>
+<p>Coursework: Artificial Intelligence, Embedded Systems, ASIC Design, VLSI Design, RISC-V Architecture, Semiconductor Fabrication.</p>
+</div></div></section><section id="teaching">
+<div class="wrap">
+<h2 class="eyebrow">teaching &amp; industry experience</h2>
+<div class="teaching"><article>
+<h3>Graduate Teaching Assistant — ECE 33700, ASIC Design Laboratory</h3>
+<p class="meta">Purdue University · Jan–May 2025</p>
+<p>Instructed 60+ students in ASIC design and authored 10+ Verilog-based homework and laboratory assignments.</p>
+</article>
+<article>
+<h3>Product Maintenance Engineer Intern — Compound Co.</h3>
+<p class="meta">Shenzhen, China · Summer 2023</p>
+<p>Worked on sensor calibration and IoT integration for medical-device products.</p>
+</article></div>
+</div>
+</section>
+<section id="hardware">
+<div class="wrap">
+<h2 class="eyebrow">selected hardware projects</h2>
+<div class="hw">
+<article>
+<h3>Multicore RISC-V Processor</h3>
+<p>Designed a five-stage pipelined RISC-V processor with forwarding and stalling for hazard handling, plus cache coherence for multicore operation.</p>
+<p class="spec">RISC-V · pipelining · cache coherence</p>
+</article>
+<article>
+<h3>USB 1.1 ASIC</h3>
+<p>Full-speed data-transfer ASIC in Verilog with an AHB-Lite interface, validated in QuestaSim.</p>
+<p class="spec">12 Mbps · 98% test coverage</p>
+</article>
+<article>
+<h3>8-bit Wallace Tree Multiplier</h3>
+<p>Full-custom schematic and layout in Cadence Virtuoso with parasitic extraction; DRC/LVS-clean.</p>
+<p class="spec">≤ 2.5 ns · ≤ 850 fJ</p>
+</article>
+</div>
+</div>
+</section>
+<section id="skills">
+<div class="wrap">
+<h2 class="eyebrow">skills</h2>
+<dl class="skills"><div><dt>programming</dt><dd>Python, C/C++, Verilog, SystemVerilog, MATLAB, Java</dd></div>
+<div><dt>ML / research</dt><dd>PyTorch, reinforcement learning, continual learning, LLM/agent evaluation, Gym, PettingZoo, DSPy, vLLM, SUMO</dd></div>
+<div><dt>hardware / EDA</dt><dd>Cadence Virtuoso, QuestaSim, DRC/LVS, RTL design, FPGA, ASIC/SoC integration</dd></div>
+<div><dt>systems / tools</dt><dd>Linux, Git, LaTeX</dd></div>
+<div><dt>languages</dt><dd>English, Mandarin</dd></div></dl>
+</div>
+</section>
 </main>
-
 <footer>
-  <div class="wrap">
-    <span>© 2026 Jiefu Zhang</span>
-    <span><a href="mailto:zhan4018@purdue.edu">zhan4018@purdue.edu</a></span>
-  </div>
+<div class="wrap"><span>© 2026 Jiefu Zhang · Updated September 8, 2026</span><span><a href="mailto:zhan4018@purdue.edu">Get in touch</a> · <a href="resume.pdf">Resume</a> · <a href="cv.pdf">Full CV</a></span></div>
 </footer>
-
 </body>
 </html>
