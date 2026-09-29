@@ -245,7 +245,8 @@ Expected graduation: December 2026</p><aside aria-labelledby="opportunity-title"
 <section id="news">
 <div class="wrap">
 <h2 class="eyebrow">news</h2>
-<ul class="news"><li><time datetime="2026-09">Sep 2026</time><span>Our paper <a href="https://arxiv.org/abs/2605.05973">“Towards Reliable LLM Evaluation: Correcting the Winner’s Curse in Adaptive Benchmarking”</a> (SIREN) was accepted to <strong>NeurIPS 2026</strong>.</span></li>
+<ul class="news"><li><time datetime="2026-09">Sep 2026</time><span>Preprints online: <a href="https://arxiv.org/abs/2609.33106">CARVE</a> (reusable expertise for chip placement without source data) and <a href="https://arxiv.org/abs/2609.33725">SPHERE</a> (reliable replay for online continual learning).</span></li>
+<li><time datetime="2026-09">Sep 2026</time><span>Our paper <a href="https://arxiv.org/abs/2605.05973">“Towards Reliable LLM Evaluation: Correcting the Winner’s Curse in Adaptive Benchmarking”</a> (SIREN) was accepted to <strong>NeurIPS 2026</strong>.</span></li>
 <li><time datetime="2026-09">Sep 2026</time><span>Actively exploring <a href="#opportunities">full-time roles and Fall 2027 PhD positions</a>. My <a href="resume.pdf">one-page resume</a> and <a href="cv.pdf">full research CV</a> are available.</span></li>
 <li><time datetime="2026-08">Aug 2026</time><span><a href="https://arxiv.org/abs/2608.30916">SASST: Selection-Aware Stress Testing for Interactive Agents</a> is now on arXiv.</span></li>
 <li><time datetime="2026-06">Jun 2026</time><span>Began a research collaboration with <a href="https://zishenwan.github.io/">Prof. Zishen Wan</a> (<a href="https://wan-research-group.github.io/people.html">Wan Lab</a>, Columbia University).</span></li>
@@ -259,7 +260,11 @@ Expected graduation: December 2026</p><aside aria-labelledby="opportunity-title"
 <section id="publications">
 <div class="wrap">
 <h2 class="eyebrow">publications &amp; preprints</h2>
-<ol class="pubs"><li><div><p class="pub-title"><a href="https://arxiv.org/abs/2608.30916">Selection-Aware Stress Testing for Interactive Agents</a></p>
+<ol class="pubs"><li><div><p class="pub-title"><a href="https://arxiv.org/abs/2609.33725">Reliable Replay through Spatial Coherence in Online Continual Learning</a></p>
+<p class="pub-authors">H. Sun, <b>J. Zhang</b>, Y. He, Y. Xu, V. Aggarwal, B. Bhargava, A. L. Liu</p><p class="pub-meta"><span>arXiv:2609.33725</span><span>Preprint · 2026</span><a href="https://arxiv.org/abs/2609.33725">[arXiv]</a></p></div></li>
+<li><div><p class="pub-title"><a href="https://arxiv.org/abs/2609.33106">CARVE: Breaking Data Barriers in Chip Placement by Harnessing Reusable Expertise</a></p>
+<p class="pub-authors"><b>J. Zhang</b>, H. Sun, Y. Xu, V. Aggarwal, Z. Wan</p><p class="pub-meta"><span>arXiv:2609.33106</span><span>Preprint · 2026</span><a href="https://arxiv.org/abs/2609.33106">[arXiv]</a></p></div></li>
+<li><div><p class="pub-title"><a href="https://arxiv.org/abs/2608.30916">Selection-Aware Stress Testing for Interactive Agents</a></p>
 <p class="pub-authors">Y. Xu, C. Li, <b>J. Zhang</b>, H. Sun, Z. Li, V. Aggarwal</p><p class="pub-meta"><span>arXiv:2608.30916</span><span>Preprint · 2026</span><a href="https://arxiv.org/abs/2608.30916">[arXiv]</a></p></div></li>
 <li><div><p class="pub-title"><a href="https://arxiv.org/abs/2605.08681">Core-Halo Decomposition: Decentralizing Large-Scale Fixed-Point Problems</a></p>
 <p class="pub-authors">H. Sun, Y. Xu, <b>J. Zhang</b>, X. Wu, Z. Zhou, J. He, J. Chen</p><p class="pub-meta"><span>arXiv:2605.08681</span><span>Preprint · 2026</span><a href="https://arxiv.org/abs/2605.08681">[arXiv]</a></p></div></li>
@@ -273,15 +278,17 @@ Expected graduation: December 2026</p><aside aria-labelledby="opportunity-title"
 <div class="wrap">
 <h2 class="eyebrow">research</h2>
 <div class="research">
-<article id="ftcr">
-<h3>FTCR — fail-closed test-time repair <span class="badge">Ongoing</span></h3>
-<p class="meta">deployed RL · specialist reuse · statistical admission · chip macro placement</p>
-<p>Developing a reuse-first repair framework for deployed reinforcement-learning policies. A frozen base model remains unchanged; family-scoped specialists are trained in isolation, tested against the base on paired evaluation episodes, and cached only after admission. Validated specialists can be reused on recurring workloads or tested for transfer to a new family. Current applications include dense-crowd navigation and chip macro placement.</p>
+<article id="carve">
+<h3>CARVE — continual adaptation through the reuse of validated expertise</h3>
+<p class="meta">chip macro placement · continual adaptation · specialist reuse · local validation</p>
+<p>Developed a framework for adapting pretrained macro-placement policies to new circuits when the provider’s training data are unavailable. CARVE keeps a frozen base policy and unchanged specialists, authorizes each specialist only for tasks on which it passes local validation, and trains a new specialist from the frozen base only when no saved one qualifies. The paper gives expected-performance guarantees for repeated reuse and matching bounds on the local samples needed for reliable reuse. In macro placement, a reuse-first variant cut recorded training time by 58.5% (9.66 → 4.01 h) while mean HPWL gain moved only from 8.41% to 7.86%, and a simulated receiving operator reused imported specialists on six of seven new IBM circuits without training of its own.</p>
+<p class="links"><a href="https://arxiv.org/abs/2609.33106">[arXiv]</a></p>
 </article>
-<article id="sc-frc">
-<h3>SC-FRC — spatially coherent forgetting risk control <span class="badge">Ongoing</span></h3>
+<article id="sphere">
+<h3>SPHERE — spatial coherent risk control for replay</h3>
 <p class="meta">online continual learning · representation geometry · experience replay</p>
-<p>Developing task-free replay that uses agreement among nearby representations to distinguish spatially supported forgetting risk from isolated noisy scores. Kernel consensus and entropy-regularized transport turn regional risk estimates into replay-loss weights, while retaining uniform rehearsal. Current work includes continual instruction tuning, controlled baseline comparisons, and analysis of estimation noise and computational cost.</p>
+<p>Co-developed a replay-allocation method for online continual learning. SPHERE uses a representation kernel to aggregate signed prospective loss changes, damping isolated spikes while keeping coherent increases, and then allocates replay through entropy-regularized transport blended with uniform rehearsal. Experiments cover noisy-label vision tasks, continual instruction tuning of language models, and code-generation reinforcement learning with incomplete test rewards.</p>
+<p class="links"><a href="https://arxiv.org/abs/2609.33725">[arXiv]</a></p>
 </article>
 <article id="sasst">
 <h3>SASST — selection-aware stress testing for interactive agents</h3>
@@ -373,7 +380,7 @@ Expected graduation: December 2026</p><aside aria-labelledby="opportunity-title"
 </section>
 </main>
 <footer>
-<div class="wrap"><span>© 2026 Jiefu Zhang · Updated September 26, 2026</span><span><a href="mailto:zhan4018@purdue.edu">Get in touch</a> · <a href="resume.pdf">Resume</a> · <a href="cv.pdf">Full CV</a></span></div>
+<div class="wrap"><span>© 2026 Jiefu Zhang · Updated September 28, 2026</span><span><a href="mailto:zhan4018@purdue.edu">Get in touch</a> · <a href="resume.pdf">Resume</a> · <a href="cv.pdf">Full CV</a></span></div>
 </footer>
 </body>
 </html>
