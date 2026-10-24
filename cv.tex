@@ -1,0 +1,128 @@
+\documentclass[11pt, letterpaper]{article}
+\usepackage[hmargin=1.6cm, vmargin=1.2cm]{geometry}
+\usepackage{enumitem}
+\usepackage{fontspec}
+\usepackage[hidelinks]{hyperref}
+% Arial if installed; otherwise Liberation Sans (same metrics), so the file compiles anywhere.
+\IfFontExistsTF{Arial}{\setmainfont{Arial}}{\setmainfont{Liberation Sans}}
+% Customize section headings
+\usepackage{titlesec}
+\titleformat{\section}{\large\scshape\bfseries}{}{0em}{}[\titlerule]
+\titlespacing{\section}{0pt}{8pt}{4pt}
+\setlength{\parindent}{0pt}
+\pagestyle{empty}
+\setlist[itemize]{leftmargin=*, nosep, after=\vspace{3pt}}
+
+\begin{document}
+% ---------------- Header ----------------
+\begin{center}
+    {\Huge \textbf{Jiefu (Jeff) Zhang}} \\[5pt]
+    \href{mailto:zhan4018@purdue.edu}{zhan4018@purdue.edu} \quad\textbar\quad
+    \href{https://jefferyz001.github.io}{jefferyz001.github.io} \quad\textbar\quad
+    \href{https://github.com/jefferyz001}{github.com/jefferyz001} \quad\textbar\quad
+    West Lafayette, IN
+\end{center}
+
+% ---------------- Research Interests ----------------
+\section{Research Interests}
+AI for chip design and manufacturing automation: reusable, learning-based physical design (macro placement); reliable evaluation of ML-for-EDA results; LLM- and agent-driven design flows; hands-on RTL-to-layout VLSI/ASIC design.
+
+% ---------------- Education ----------------
+\section{Education}
+\textbf{Purdue University} \hfill West Lafayette, IN \\
+\textit{Master of Science in Computer Engineering (Thesis Track)} \hfill \textit{Expected December 2026} \\
+\textit{Bachelor of Science in Computer Engineering} \hfill \textit{Graduated December 2024}
+\begin{itemize}
+    \item Accelerated BS/MS Program \quad | \quad Graduate GPA: 3.88/4.0
+    \item \textbf{Relevant Coursework:} ASIC Design, VLSI Design, Semiconductor Fabrication, RISC-V Architecture, Embedded Systems, Artificial Intelligence
+\end{itemize}
+
+% ---------------- Honors ----------------
+\section{Honors \& Awards}
+\begin{itemize}
+    \item \textbf{NeurIPS 2026 Financial Assistance Award} -- full conference and workshop registration and hotel stay
+\end{itemize}
+
+% ---------------- Publications ----------------
+\section{Publications \& Preprints}
+\begin{itemize}
+    \item \textbf{J. Zhang}, H. Sun, Y. Xu, V. Aggarwal, Z. Wan, ``CARVE: Breaking Data Barriers in Chip Placement by Harnessing Reusable Expertise.'' \href{https://arxiv.org/abs/2609.33106}{\textit{arXiv:2609.33106}}, 2026.
+    \item \textbf{J. Zhang}, Y. Xu, H. Sun, Z. Zhou, T. Cao, V. Aggarwal, ``Towards Reliable LLM Evaluation: Correcting the Winner's Curse in Adaptive Benchmarking.'' \textbf{\textit{NeurIPS 2026}}. \href{https://arxiv.org/abs/2605.05973}{\textit{arXiv:2605.05973}}.
+    \item H. Sun, \textbf{J. Zhang}, Y. He, Y. Xu, V. Aggarwal, B. Bhargava, A. L. Liu, ``Reliable Replay through Spatial Coherence in Online Continual Learning.'' \href{https://arxiv.org/abs/2609.33725}{\textit{arXiv:2609.33725}}, 2026.
+    \item Y. Xu, C. Li, \textbf{J. Zhang}, H. Sun, Z. Li, V. Aggarwal, ``Selection-Aware Stress Testing for Interactive Agents.'' \href{https://arxiv.org/abs/2608.30916}{\textit{arXiv:2608.30916}}, 2026.
+    \item \textbf{J. Zhang}, Y. Xu, V. Aggarwal, ``Don't Freeze, Don't Crash: Extending the Safe Operating Range of Neural Navigation in Dense Crowds.'' \href{https://arxiv.org/abs/2603.06729}{\textit{arXiv:2603.06729}}, 2026.
+    \item H. Sun, Y. Xu, \textbf{J. Zhang}, X. Wu, Z. Zhou, J. He, J. Chen, ``Core-Halo Decomposition: Decentralizing Large-Scale Fixed-Point Problems.'' \href{https://arxiv.org/abs/2605.08681}{\textit{arXiv:2605.08681}}, 2026.
+\end{itemize}
+
+% ---------------- Research Experience ----------------
+\section{Research Experience}
+\textbf{Graduate Research Assistant, CLAN Lab, Purdue University} \hfill Oct 2024 -- Present \\
+\textit{Advisor: Prof.\ Vaneet Aggarwal} \\[2pt]
+\textbf{MS Student Member, Wan Lab, Columbia University} \hfill Jun 2026 -- Present \\
+\textit{Advisor: Prof.\ Zishen Wan} \\[4pt]
+\textit{CARVE: Reusable Expertise for Chip Macro Placement} (first author) \hfill \href{https://arxiv.org/abs/2609.33106}{arXiv:2609.33106}
+\begin{itemize}
+    \item Developed a framework that adapts pretrained RL macro-placement policies to new circuits when the provider's original training data are unavailable. A frozen base policy and saved specialists are reused only on tasks where they pass local validation; a new specialist is trained from the frozen base only when none qualifies.
+    \item The framework comes with expected-performance guarantees for repeated reuse and matching bounds on the number of local samples needed for reliable reuse.
+    \item On IBM placement benchmarks, a reuse-first variant cut recorded training time by 58.5\% (9.66 $\rightarrow$ 4.01 h) while mean HPWL gain moved only from 8.41\% to 7.86\%; a simulated receiving operator reused imported specialists on 6 of 7 new IBM circuits without training of its own.
+    \item Joint project of CLAN Lab (Purdue) and Wan Lab (Columbia University).
+\end{itemize}
+\textit{SIREN: Correcting the Winner's Curse in LLM Evaluation} (first author) \hfill \textbf{NeurIPS 2026}
+\begin{itemize}
+    \item Co-developed a repeated-split reporting protocol that corrects the winner's curse when a tuned configuration is selected and reported on the same benchmark data: it freezes a post-search shortlist, separates selection from held-out evaluation, and gives simultaneous confidence bands through an item-level multiplier bootstrap.
+    \item Contributed to the theory showing that the repeated-split estimator admits a first-order item-level representation, which justifies bootstrap validity on a finite budget grid.
+    \item Led MMLU-Pro tuning experiments on open-weight models (vLLM serving, DSPy prompt optimization), showing that winner-based reporting is optimistic and can flip deployment conclusions while SIREN stays close to the finite-sample target.
+    \item Ongoing: extending SIREN to AI-for-EDA results, where the best run of a learned optimizer is typically selected and reported on the same benchmark circuits; current experiments use macro placement.
+\end{itemize}
+\textit{SPHERE: Reliable Replay through Spatial Coherence in Online Continual Learning} \hfill \href{https://arxiv.org/abs/2609.33725}{arXiv:2609.33725}
+\begin{itemize}
+    \item Co-developed a replay-allocation method that aggregates signed prospective loss changes through a representation kernel, damping isolated spikes while keeping coherent increases, then allocates replay by entropy-regularized transport blended with uniform rehearsal. Evaluated on noisy-label vision tasks, continual instruction tuning of language models, and code-generation RL with incomplete test rewards.
+\end{itemize}
+\textit{Safe Robot Navigation in Dense Crowds (PSS-Social)} (first author) \hfill \href{https://arxiv.org/abs/2603.06729}{arXiv:2603.06729} $\cdot$ \href{https://github.com/jefferyz001/PSS-Social}{code}
+\begin{itemize}
+    \item Built a PPO-based navigation framework with density-invariant observations, density-randomized training and density-adaptive proxemic reward shaping to address the freezing-robot problem; reached 86\%+ safe success at 21-agent crowd densities where DS-RNN and SARL baselines collapse, with ORCA and SFM as analytical baselines.
+\end{itemize}
+\textit{Core-Halo Decomposition for Decentralized Fixed-Point Problems} \hfill \href{https://arxiv.org/abs/2605.08681}{arXiv:2605.08681}
+\begin{itemize}
+    \item Built SUMO and PettingZoo traffic-control benchmarks on a 14-intersection bridge and a 7-intersection ring, plus the decentralized DQN pipeline, showing Core-Halo closes most of the gap to centralized DQN in mean waiting time with only one-hop read access; contributed the PageRank and smart-grid experiments.
+\end{itemize}
+
+% ---------------- Hardware ----------------
+\section{Selected Hardware Projects}
+\textbf{Multicore RISC-V Processor}
+\begin{itemize}
+    \item Designed a 5-stage pipelined RISC-V processor with hazard resolution through forwarding and stalling; improved multicore efficiency by 30\% with the MOESI cache-coherence protocol.
+\end{itemize}
+\textbf{USB 1.1 ASIC Data-Transfer Engine}
+\begin{itemize}
+    \item Implemented a 12 Mbps full-speed USB 1.1 data-transfer engine in Verilog with an AHB-Lite interface; verified in QuestaSim with 98\% test coverage.
+\end{itemize}
+\textbf{8-bit Wallace Tree Multiplier} \hfill ECE 559 MOS VLSI Design
+\begin{itemize}
+    \item Full-custom schematic and layout in Cadence Virtuoso, DRC/LVS clean, with parasitic extraction for timing and power; worst-case delay $\leq$ 2.5 ns, energy $\leq$ 850 fJ.
+\end{itemize}
+
+% ---------------- Teaching ----------------
+\section{Teaching Experience}
+\textbf{Graduate Teaching Assistant}, ECE 33700 ASIC Design Laboratory, Purdue \hfill Jan -- May 2025
+\begin{itemize}
+    \item Instructed 60+ students in ASIC design; authored 10+ Verilog-based homework and lab assignments.
+\end{itemize}
+
+% ---------------- Skills ----------------
+\section{Technical Skills}
+% TODO: add the placement environment, tools and benchmark suite you actually used in CARVE.
+\begin{itemize}
+    \item \textbf{Programming:} Python, C/C++, Verilog, SystemVerilog, MATLAB, Java
+    \item \textbf{ML / AI for EDA:} PyTorch, deep RL (PPO, DQN), RL-based macro placement, continual learning, LLM and agent evaluation, DSPy, vLLM, Gym, PettingZoo, SUMO
+    \item \textbf{Hardware / EDA:} Cadence Virtuoso, QuestaSim, DRC and LVS, parasitic extraction, RTL design, FPGA, ASIC and SoC integration
+    \item \textbf{General:} Linux, Git, \LaTeX
+\end{itemize}
+
+% ---------------- Additional ----------------
+\section{Additional}
+\begin{itemize}
+    \item \textbf{Industry:} Product Maintenance Engineer Intern, Compound Co., Shenzhen (Summer 2023) -- sensor calibration and IoT integration for medical devices.
+    \item \textbf{Languages:} English (fluent), Mandarin (native)
+\end{itemize}
+\end{document}

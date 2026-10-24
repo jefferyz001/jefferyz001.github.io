@@ -1,0 +1,113 @@
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[top=0.35in, bottom=0.35in, left=0.55in, right=0.55in]{geometry}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage{hyperref}
+
+% ---- Hide all link colors ----
+\hypersetup{hidelinks}
+
+% ---- Page Setup ----
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+
+% ---- Custom section command for precise spacing ----
+\newcommand{\ressection}[1]{%
+  \vspace{3pt}%
+  \noindent{\large\bfseries\scshape #1}%
+  \par\vspace{1pt}%
+  \hrule height 0.4pt%
+  \vspace{2pt}%
+}
+
+\begin{document}
+
+% ====================
+% HEADER
+% ====================
+\begin{center}
+  {\LARGE \textbf{Jiefu (Jeff) Zhang}} \\[2pt]
+  \href{mailto:zhan4018@purdue.edu}{zhan4018@purdue.edu} $|$
+  \href{https://jefferyz001.github.io}{jefferyz001.github.io} $|$
+  \href{https://github.com/jefferyz001}{github.com/jefferyz001} $|$
+  West Lafayette, IN \\[2pt]
+  \textit{Research focus: AI for chip design and manufacturing automation (EDA)}
+\end{center}
+
+\vspace{-6pt}
+
+% ====================
+% EDUCATION
+% ====================
+\ressection{Education}
+
+\begin{tabular*}{\textwidth}{@{}l@{\extracolsep{\fill}}r@{}}
+  \textbf{Purdue University} & West Lafayette, IN \\
+  \textit{M.S. Computer Engineering (Thesis Track)} & \textit{Expected Dec 2026} \\
+  \textit{B.S. Computer Engineering} & \textit{Dec 2024} \\
+\end{tabular*}
+
+\begin{itemize}[leftmargin=1.2em, topsep=2pt, itemsep=1pt, parsep=0pt]
+  \item Accelerated BS/MS Program \,|\, Graduate GPA: 3.88/4.0
+  \item Coursework: ASIC Design, VLSI Design, Semiconductor Fabrication, RISC-V Architecture, Embedded Systems, Artificial Intelligence
+\end{itemize}
+
+% ====================
+% RESEARCH EXPERIENCE
+% ====================
+\ressection{Research Experience}
+
+\begin{tabular*}{\textwidth}{@{}l@{\extracolsep{\fill}}r@{}}
+  \textbf{Graduate Research Assistant, CLAN Lab, Purdue University} & Oct 2024 -- Present \\
+  \textbf{MS Student Member, Wan Lab, Columbia University} & Jun 2026 -- Present \\
+\end{tabular*}
+\textit{Advisors: Prof.\ Vaneet Aggarwal (Purdue) and Prof.\ Zishen Wan (Columbia)}
+
+\vspace{2pt}
+\begin{itemize}[leftmargin=1.2em, topsep=3pt, itemsep=3pt, parsep=0pt]
+  \item \textbf{CARVE: Chip Placement with Reusable Expertise} (first author, \href{https://arxiv.org/abs/2609.33106}{arXiv:2609.33106}): Adapted pretrained RL macro-placement policies to new circuits without the original training data, reusing saved specialists only after they pass local validation. A reuse-first variant cut recorded training time by \textbf{58.5\%} (9.66 $\rightarrow$ 4.01 h) while mean HPWL gain moved only from 8.41\% to 7.86\%; imported specialists were reused on \textbf{6 of 7} new IBM circuits.
+  \item \textbf{SIREN: Correcting the Winner's Curse in LLM Evaluation} (first author, \textbf{NeurIPS 2026}, \href{https://arxiv.org/abs/2605.05973}{arXiv}): Co-developed a selection-aware repeated-split reporting protocol with bootstrap confidence bands; led MMLU-Pro tuning experiments with vLLM-served open-weight models and DSPy. Now extending it to AI-for-EDA results (macro placement).
+  \item \textbf{Safe Social Robot Navigation} (first author, \href{https://arxiv.org/abs/2603.06729}{arXiv:2603.06729}, \href{https://github.com/jefferyz001/PSS-Social}{code}): Built a PPO-based navigation framework with density-adaptive proxemic reward shaping; achieved \textbf{86\%+ safe success at 21-agent crowd densities} where DS-RNN and SARL baselines collapse, benchmarked against ORCA and SFM.
+  \item \textbf{Continual and Decentralized Learning} (\href{https://arxiv.org/abs/2609.33725}{SPHERE}, \href{https://arxiv.org/abs/2605.08681}{Core-Halo}): Co-developed representation-guided replay allocation for online continual learning; built SUMO/PettingZoo multi-intersection traffic-control benchmarks and a decentralized DQN pipeline for decentralized fixed-point learning.
+\end{itemize}
+
+% ====================
+% SELECTED PROJECTS
+% ====================
+\ressection{Selected Hardware Projects}
+
+\begin{itemize}[leftmargin=1.2em, topsep=2pt, itemsep=3pt, parsep=0pt]
+  \item \textbf{Multicore RISC-V Processor:} Designed a 5-stage pipelined RISC-V processor with hazard resolution via forwarding/stalling; improved multicore efficiency by \textbf{30\%} using MOESI cache coherence.
+  \item \textbf{USB 1.1 ASIC Data Transfer:} Achieved \textbf{12 Mbps} throughput (USB 1.1 standard) in Verilog with AHB-Lite interface; validated via QuestaSim with \textbf{98\% test coverage}.
+  \item \textbf{8-bit Wallace Tree Multiplier} (ECE 559 MOS VLSI Design): Full-custom schematic/layout, DRC/LVS clean; worst-case delay \textbf{$\leq$ 2.5\,ns}, energy $\leq$ 850\,fJ with parasitic extraction.
+\end{itemize}
+
+% ====================
+% TECHNICAL SKILLS
+% ====================
+\ressection{Technical Skills}
+
+\begin{itemize}[leftmargin=1.2em, topsep=2pt, itemsep=2pt, parsep=0pt]
+  \item \textbf{Programming:} Python, C/C++, Verilog, SystemVerilog, Java, Bash, Git, \LaTeX
+  \item \textbf{ML / AI for EDA:} PyTorch, RL (PPO, DQN), RL-based macro placement, continual learning, LLM evaluation, DSPy, vLLM, PettingZoo, Multi-GPU Training
+  \item \textbf{Hardware/EDA:} Cadence Virtuoso, QuestaSim, DRC/LVS, parasitic extraction, RTL Design, FPGA, ASIC/SoC Integration, Linux
+\end{itemize}
+
+% ====================
+% ADDITIONAL
+% ====================
+\ressection{Additional}
+
+\begin{itemize}[leftmargin=1.2em, topsep=2pt, itemsep=2pt, parsep=0pt]
+  \item \textbf{Award:} NeurIPS 2026 Financial Assistance Award (full conference and workshop registration and hotel stay)
+  \item \textbf{Teaching:} Graduate TA, Purdue ECE 33700 -- ASIC Design Laboratory, 60+ students (Spring 2025)
+  \item \textbf{Industry Intern:} Product Maintenance Engineer Intern, Compound Co., Shenzhen (Summer 2023) -- sensor calibration \& IoT for medical devices
+  \item \textbf{Languages:} English (fluent, in the US since 2016), Mandarin (native)
+\end{itemize}
+
+\end{document}
